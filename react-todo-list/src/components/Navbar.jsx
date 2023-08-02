@@ -7,7 +7,7 @@ export default function Navbar() {
     <>
       <ChakraProvider>
         <Center boxShadow={'xs'} h="80px">
-          <Text fontSize="2xl">React To-Do-List</Text>
+          <Text fontSize="2xl"><b>React</b> To-Do-List</Text>
         </Center>
       </ChakraProvider>
     </>
