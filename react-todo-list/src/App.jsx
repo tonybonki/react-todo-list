@@ -5,7 +5,9 @@ function App() {
 
   return (
     <>
-      <Navbar></Navbar>
+      <ChakraProvider>
+        <Navbar></Navbar>
+      </ChakraProvider>
     </>
   );
 }
