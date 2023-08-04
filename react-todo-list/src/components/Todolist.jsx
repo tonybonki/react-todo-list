@@ -7,21 +7,32 @@ import {
     Box,
     Text,
     StackDivider,
-
+    Input,
+    HStack,
 } from "@chakra-ui/react";
 
 export default function Cardlist() {
     return (
       <>
-        <Card mx={'auto'} my={'100px'} width={'60%'}>
-          <CardHeader>
-            <Heading size="md">Client Report</Heading>
+        <Card fontWeight={"light"} mx={"auto"} my={"100px"} width={"60%"}>
+                <CardHeader>
+                    <HStack>
+                        
+                    </HStack>
+            <Heading mb={3} fontWeight={"light"} size="md">
+              React to-do-list
+            </Heading>
+            <Input size={"sm"} width={"60%"} />
           </CardHeader>
 
           <CardBody>
             <Stack divider={<StackDivider />} spacing="4">
               <Box>
-                <Heading size="xs" textTransform="uppercase">
+                <Heading
+                  fontWeight={"light"}
+                  size="xs"
+                  textTransform="uppercase"
+                >
                   Summary
                 </Heading>
                 <Text pt="2" fontSize="sm">
@@ -29,7 +40,11 @@ export default function Cardlist() {
                 </Text>
               </Box>
               <Box>
-                <Heading size="xs" textTransform="uppercase">
+                <Heading
+                  fontWeight={"light"}
+                  size="xs"
+                  textTransform="uppercase"
+                >
                   Overview
                 </Heading>
                 <Text pt="2" fontSize="sm">
@@ -37,7 +52,11 @@ export default function Cardlist() {
                 </Text>
               </Box>
               <Box>
-                <Heading size="xs" textTransform="uppercase">
+                <Heading
+                  fontWeight={"light"}
+                  size="xs"
+                  textTransform="uppercase"
+                >
                   Analysis
                 </Heading>
                 <Text pt="2" fontSize="sm">
