@@ -21,26 +21,8 @@ export default function Footer() {
       bg={useColorModeValue("gray.50", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
     >
-      <Container
-        as={Stack}
-        py={4}
-        spacing={4}
-        justify={"center"}
-        align={"center"}
-      >
-        <Tooltip
-          fontSize="xs"
-          hasArrow
-          label="View Github Repository"
-          aria-label="A tooltip"
-        >
-          <Link href="https://github.com/tonybonki/react-todo-list">
-            <Logo />
-          </Link>
-        </Tooltip>
-
-        <Divider />
-        <HStack spacing={2}>
+      <Container as={Stack}  justify={"center"} align={"center"}>
+        <HStack mt={2}>
           <Tooltip
             fontSize="xs"
             hasArrow
@@ -56,6 +38,18 @@ export default function Footer() {
             2023 Tony Bonki
           </Text>
         </HStack>
+
+        {/* Attributions  */}
+        <Box as={Stack} pb={4} justify={"center"} align={"center"}>
+          <Divider />
+          <Link fontSize={"14px"} href="https://lordicon.com/">
+            Icons by Lordicon.com
+          </Link>
+
+          <Link fontSize={"14px"} href="https://app.brandmark.io/v3/">
+            React logo made on by App.brandmark.ie
+          </Link>
+        </Box>
       </Container>
     </Box>
   );

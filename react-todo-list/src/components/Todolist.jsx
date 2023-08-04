@@ -15,7 +15,12 @@ import {
 export default function Cardlist() {
   return (
     <>
-      <Card fontWeight={"light"} mx={"auto"} my={"100px"} width={{base:'90%', sm:'60%'}}>
+      <Card
+        fontWeight={"light"}
+        mx={"auto"}
+        my={"100px"}
+        width={{ base: "90%", sm: "40%" }}
+      >
         <CardHeader>
           <Box>
             <Image
