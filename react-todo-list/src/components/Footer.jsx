@@ -21,7 +21,7 @@ export default function Footer() {
       bg={useColorModeValue("gray.50", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
     >
-      <Container as={Stack}  justify={"center"} align={"center"}>
+      <Container as={Stack} justify={"center"} align={"center"}>
         <HStack mt={2}>
           <Tooltip
             fontSize="xs"
@@ -42,8 +42,8 @@ export default function Footer() {
         {/* Attributions  */}
         <Box as={Stack} pb={4} justify={"center"} align={"center"}>
           <Divider />
-          <Link fontSize={"14px"} href="https://lordicon.com/">
-            Icons by Lordicon.com
+          <Link fontSize={"14px"} href="https://chakra-ui.com/">
+            Icons by ChakraUI.com
           </Link>
 
           <Link fontSize={"14px"} href="https://app.brandmark.io/v3/">
