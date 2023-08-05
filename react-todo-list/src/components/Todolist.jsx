@@ -9,8 +9,13 @@ import {
   StackDivider,
   Input,
   Image,
+  Button,
+  ButtonGroup,
+  IconButton,
   HStack,
 } from "@chakra-ui/react";
+
+import { AddIcon } from "@chakra-ui/icons";
 
 export default function Cardlist() {
   return (
@@ -32,6 +37,10 @@ export default function Cardlist() {
           </Box>
           <HStack>
             <Input size={"sm"} />
+            <ButtonGroup size="sm" isAttached variant="outline">
+              <Button fontWeight={'light'}>Add</Button>
+              <IconButton aria-label="Add to friends" icon={<AddIcon />} />
+            </ButtonGroup>
           </HStack>
         </CardHeader>
 
