@@ -47,7 +47,7 @@ export default function Footer() {
           </Link>
 
           <Link fontSize={"14px"} href="https://app.brandmark.io/v3/">
-            React logo made on by App.brandmark.ie
+            React logo made by App.brandmark.ie
           </Link>
         </Box>
       </Container>
