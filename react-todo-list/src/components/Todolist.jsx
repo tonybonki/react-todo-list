@@ -17,7 +17,37 @@ import {
 
 import { AddIcon } from "@chakra-ui/icons";
 
+import { useState } from "react";
+
 export default function Cardlist() {
+  const [newItem, setNewItem] = useState("");
+  const [todos, setTodos] = useState([]);
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    setTodos((currentTodos) => {
+      return [
+        ...currentTodos,
+        { id: crypto.randomUUID(), title: newItem, completed: false },
+      ];
+    });
+    setNewItem("")
+  }
+
+  function toggleTodo(id, completed) {
+    setTodos(currentTodos => {
+      return currentTodos.map(todo => {
+        if (todo.id === id) {
+          return { ...todo, completed }
+        }
+
+        return todo
+      })
+    })
+  }
+
+
+
   return (
     <>
       <Card
@@ -35,13 +65,30 @@ export default function Cardlist() {
               src="../../images/logos/logo2.png"
             ></Image>
           </Box>
-          <HStack>
-            <Input size={"sm"} />
-            <ButtonGroup size="sm" isAttached variant="outline">
-              <Button fontWeight={'light'}>Add</Button>
-              <IconButton aria-label="Add to friends" icon={<AddIcon />} />
-            </ButtonGroup>
-          </HStack>
+          <form onSubmit={handleSubmit} className="new-item-form">
+            <HStack>
+              <Input
+                value={newItem}
+                placeholder="Task Name"
+                type="text"
+                onChange={(e) => setNewItem(e.target.value)}
+                id="item"
+                size={"sm"}
+              />
+              <Input
+                value={newItem}
+                placeholder="description"
+                type="text"
+                onChange={(e) => setNewItem(e.target.value)}
+                id="item"
+                size={"sm"}
+              />
+              <ButtonGroup size="sm" isAttached variant="outline">
+                <Button fontWeight={"light"}>Add</Button>
+                <IconButton aria-label="Add to friends" icon={<AddIcon />} />
+              </ButtonGroup>
+            </HStack>
+          </form>
         </CardHeader>
 
         <CardBody>
