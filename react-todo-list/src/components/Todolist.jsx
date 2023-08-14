@@ -13,6 +13,7 @@ import {
   ButtonGroup,
   IconButton,
   HStack,
+  Checkbox,
 } from "@chakra-ui/react";
 
 import { AddIcon } from "@chakra-ui/icons";
@@ -96,14 +97,20 @@ export default function Cardlist() {
 
         <CardBody>
           <Stack divider={<StackDivider />} spacing="4">
-            <Box>
+            {todos.map(todo => {
+              <Box key={todo.id}>
               <Heading fontWeight={"light"} size="xs" textTransform="uppercase">
                 Summary
               </Heading>
-              <Text pt="2" fontSize="sm">
+              <Text pt="2" fontSize="xs">
                 View a summary of all your clients over the last month.
-              </Text>
-            </Box>
+                </Text>
+                <Input type="checkboc"></Input>
+                <Checkbox checked{}
+              
+            </Box> 
+            })}
+            
             <Box>
               <Heading fontWeight={"light"} size="xs" textTransform="uppercase">
                 Overview
