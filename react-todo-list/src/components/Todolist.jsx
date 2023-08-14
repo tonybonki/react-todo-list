@@ -69,25 +69,28 @@ export default function Cardlist() {
             <HStack>
               <Input
                 value={newItem}
-                placeholder="Task Name"
+                placeholder="Name"
                 type="text"
                 onChange={(e) => setNewItem(e.target.value)}
                 id="item"
+                my={3}
+                w={300}
                 size={"sm"}
               />
-              <Input
-                value={newItem}
-                placeholder="description"
-                type="text"
-                onChange={(e) => setNewItem(e.target.value)}
-                id="item"
-                size={"sm"}
-              />
+
               <ButtonGroup size="sm" isAttached variant="outline">
                 <Button fontWeight={"light"}>Add</Button>
                 <IconButton aria-label="Add to friends" icon={<AddIcon />} />
               </ButtonGroup>
             </HStack>
+            <Input
+              value={newItem}
+              placeholder="Description"
+              type="text"
+              onChange={(e) => setNewItem(e.target.value)}
+              id="item"
+              size={"xs"}
+            />
           </form>
         </CardHeader>
 
