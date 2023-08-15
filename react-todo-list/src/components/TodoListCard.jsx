@@ -8,6 +8,8 @@ import {
   Text,
   StackDivider,
   Input,
+  FormControl,
+  FormLabel,
   Image,
   Button,
   ButtonGroup,
@@ -19,33 +21,17 @@ import { AddIcon } from "@chakra-ui/icons";
 
 import { useState } from "react";
 
-export default function ChakraUiForm() {
-  const [newItem, setNewItem] = useState("");
-  const [todos, setTodos] = useState([]);
-  function handleSubmit(e) {
-    e.preventDefault();
+export default function ChakraUiForm({ onSubmit }) {
+    const [newItem, setNewItem] = useState("");
 
-    setTodos((currentTodos) => {
-      return [
-        ...currentTodos,
-        { id: crypto.randomUUID(), title: newItem, completed: false },
-      ];
-    });
-    setNewItem("");
-  }
+    function handleSubmit(e) {
+      e.preventDefault();
+      if (newItem === "") return;
 
-  function toggleTodo(id, completed) {
-    setTodos((currentTodos) => {
-      return currentTodos.map((todo) => {
-        if (todo.id === id) {
-          return { ...todo, completed };
-        }
+      onSubmit(newItem);
 
-        return todo;
-      });
-    });
-  }
-
+      setNewItem("");
+    }
   return (
     <>
       <Card
@@ -63,33 +49,30 @@ export default function ChakraUiForm() {
               src="../../images/logos/logo2.png"
             ></Image>
           </Box>
-          <form onSubmit={handleSubmit} className="new-item-form">
-            <HStack>
-              <Input
-                value={newItem}
-                placeholder="Name"
-                type="text"
-                onChange={(e) => setNewItem(e.target.value)}
-                id="item"
-                my={3}
-                w={300}
-                size={"sm"}
-              />
 
-              <ButtonGroup size="sm" isAttached variant="outline">
-                <Button fontWeight={"light"}>Add</Button>
-                <IconButton aria-label="Add to friends" icon={<AddIcon />} />
-              </ButtonGroup>
-            </HStack>
+          <HStack
+            as="form"
+            onSubmit={handleSubmit}
+            className="new-item-form"
+            spacing={4}
+          >
             <Input
               value={newItem}
-              placeholder="Description"
-              type="text"
               onChange={(e) => setNewItem(e.target.value)}
+              type="text"
               id="item"
-              size={"xs"}
+              my={3}
+              w={300}
+              size={"sm"}
             />
-          </form>
+
+            <ButtonGroup size="sm" isAttached variant="outline">
+              <Button type="submit" fontWeight={"light"}>
+                Add
+              </Button>
+              <IconButton aria-label="Add to friends" icon={<AddIcon />} />
+            </ButtonGroup>
+          </HStack>
         </CardHeader>
 
         <CardBody>
