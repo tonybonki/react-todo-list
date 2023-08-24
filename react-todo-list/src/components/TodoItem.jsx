@@ -9,7 +9,7 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
       />
       <Box>
         <Text fontWeight={"light"} fontSize="sm">
-          {title}
+          Task
         </Text>
         <Text fontWeight={"light"} fontSize="sm">
           {title}

@@ -17,6 +17,7 @@ import {
   HStack,
 } from "@chakra-ui/react";
 
+import DeleteIcon from "./Icons/DeleteIcon";
 import { AddIcon } from "@chakra-ui/icons";
 
 import { useState } from "react";
@@ -55,7 +56,8 @@ export default function ChakraUiForm({ onSubmit }) {
             onSubmit={handleSubmit}
             className="new-item-form"
             spacing={4}
-          >
+                  >
+                      <DeleteIcon></DeleteIcon>
             <Input
               value={newItem}
               onChange={(e) => setNewItem(e.target.value)}
@@ -70,7 +72,11 @@ export default function ChakraUiForm({ onSubmit }) {
               <Button type="submit" fontWeight={"light"}>
                 Add
               </Button>
-              <IconButton aria-label="Add to friends" icon={<AddIcon />} />
+              <IconButton
+                type="submit"
+                aria-label="Add to friends"
+                icon={<DeleteIcon />}
+              />
             </ButtonGroup>
           </HStack>
         </CardHeader>
