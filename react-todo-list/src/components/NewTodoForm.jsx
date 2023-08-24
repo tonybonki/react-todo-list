@@ -48,9 +48,6 @@ export function NewTodoForm({ onSubmit }) {
           id="item"
         />
       </FormControl>
-      <Button type="submit" className="btn">
-        Add
-      </Button>
     </VStack>
   );
 }

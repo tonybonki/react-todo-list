@@ -1,23 +1,24 @@
-import { Checkbox, Box, Heading, Text } from "@chakra-ui/react";
+import { Checkbox, Heading, Text, Box, HStack } from "@chakra-ui/react";
 
 export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
   return (
-    <Box>
-              <Text pt="2" fontSize="sm">
-                {title}
-              </Text>
-            </Box>
-    <li>
+    <HStack>
       <Checkbox
         isChecked={completed}
         onChange={(e) => toggleTodo(id, e.target.checked)}
       />
-
-      {title}
+      <Box>
+        <Text fontWeight={"light"} fontSize="sm">
+          {title}
+        </Text>
+        <Text fontWeight={"light"} fontSize="sm">
+          {title}
+        </Text>
+      </Box>
 
       <button onClick={() => deleteTodo(id)} className="btn btn-danger">
         Delete
       </button>
-    </li>
+    </HStack>
   );
 }
