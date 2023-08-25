@@ -56,8 +56,7 @@ export default function ChakraUiForm({ onSubmit }) {
             onSubmit={handleSubmit}
             className="new-item-form"
             spacing={4}
-                  >
-                      <DeleteIcon></DeleteIcon>
+          >
             <Input
               value={newItem}
               onChange={(e) => setNewItem(e.target.value)}
@@ -75,7 +74,7 @@ export default function ChakraUiForm({ onSubmit }) {
               <IconButton
                 type="submit"
                 aria-label="Add to friends"
-                icon={<DeleteIcon />}
+                icon={<AddIcon h={} />}
               />
             </ButtonGroup>
           </HStack>
