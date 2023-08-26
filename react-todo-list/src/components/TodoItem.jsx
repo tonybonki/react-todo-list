@@ -8,7 +8,7 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
         isChecked={completed}
         onChange={(e) => toggleTodo(id, e.target.checked)}
       />
-      <Box>
+      <Box my={2}>
         <Text fontWeight={"light"} fontSize="sm">
           {title}
         </Text>
@@ -25,8 +25,6 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
 
         <IconButton
           onClick={() => deleteTodo(id)}
-          className="btn btn-danger"
-          aria-label="Add to friends"
           icon={<DeleteIcon />}
         />
       </ButtonGroup>

@@ -17,7 +17,6 @@ import {
   HStack,
 } from "@chakra-ui/react";
 
-import DeleteIcon from "./Icons/DeleteIcon";
 import { AddIcon } from "@chakra-ui/icons";
 
 import { useState } from "react";
