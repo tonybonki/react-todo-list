@@ -1,5 +1,14 @@
 import React from "react";
-import { Input } from "@chakra-ui/react";
+import {
+  Input,
+  Stack,
+  StackDivider,
+  ButtonGroup,
+  Button,
+  IconButton,
+  HStack,
+} from "@chakra-ui/react";
+import { AddIcon } from "@chakra-ui/icons";
 import { useTodoManager } from "./functions/useTodoManager"; // Import the custom hook
 import { TodoItem } from "./TodoItem"; // Import TodoItem component if needed
 
@@ -17,29 +26,53 @@ export function TodoList() {
     setNewItem("");
   }
   return (
-    <div>
-      <Input
-        value={newItem}
-        onChange={(e) => setNewItem(e.target.value), () => addTodo(newItem)}
-        
-        type="text"
-        id="item"
-        my={3}
-        w={300}
-        size={"sm"}
-      />
-      <button onClick={() => addTodo("New Todo")}>Add Todo</button>
-      <ul className="list">
-        {todos.length === 0 && <p>No Todos</p>}
-        {todos.map((todo) => (
-          <TodoItem
-            {...todo}
-            key={todo.id}
-            toggleTodo={toggleTodo}
-            deleteTodo={deleteTodo}
+    <>
+      <HStack
+        as="form"
+        onSubmit={handleSubmit}
+        className="new-item-form"
+        spacing={4}
+      >
+        <Input
+          value={newItem}
+          onChange={(e) => setNewItem(e.target.value)}
+          type="text"
+          id="item"
+          my={3}
+          w={300}
+          size={"sm"}
+        />
+        <ButtonGroup
+          onClick={() => addTodo(newItem)}
+          size="sm"
+          isAttached
+          variant="outline"
+        >
+          <Button type="submit" fontWeight={"light"}>
+            Add
+          </Button>
+
+          <IconButton
+            type="submit"
+            aria-label="Add to friends"
+            icon={<AddIcon />}
           />
-        ))}
-      </ul>
-    </div>
+        </ButtonGroup>
+      </HStack>
+
+     
+        {todos.length === 0 && <p>No Todos</p>}
+        <Stack divider={<StackDivider />} >
+          {todos.map((todo) => (
+            <TodoItem
+              {...todo}
+              key={todo.id}
+              toggleTodo={toggleTodo}
+              deleteTodo={deleteTodo}
+            />
+          ))}
+        </Stack>
+      
+    </>
   );
 }
