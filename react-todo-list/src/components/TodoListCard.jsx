@@ -71,12 +71,14 @@ export default function ChakraUiForm({ onSubmit }) {
               <Button type="submit" fontWeight={"light"}>
                 Add
               </Button>
+              
               <IconButton
                 type="submit"
                 aria-label="Add to friends"
-                icon={<AddIcon h={} />}
+                icon={<AddIcon />}
               />
             </ButtonGroup>
+            
           </HStack>
         </CardHeader>
 

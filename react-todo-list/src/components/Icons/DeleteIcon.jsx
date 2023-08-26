@@ -1,7 +1,7 @@
 import React from "react";
 import { Image } from "@chakra-ui/react";
-const DeleteIcon = ({ src, alt }) => {
-  return <img src="../../images/icons/delete.png" alt="Delete Icon" />;
+const DeleteIcon = () => {
+  return <Image src="../../images/icons/delete.png" h={4} alt="Delete Icon" />;
 };
 
 export default DeleteIcon;
