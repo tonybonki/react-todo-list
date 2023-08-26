@@ -6,13 +6,16 @@ import { TodoList } from './components/Todolist';
 import { useEffect, useState } from "react";
 import { NewTodoForm } from './components/NewTodoForm';
 import ChakraUiForm from './components/TodoListCard';
+
+import { useTodoManager } from './components/functions/useTodoManager';
+
 function App() {
   return (
     <>
       <ChakraProvider>
         <Navbar></Navbar>
         <TodoList/>
-        <ChakraUiForm></ChakraUiForm>
+        <ChakraUiForm ></ChakraUiForm>
         <Footer></Footer>
       </ChakraProvider>
     </>
