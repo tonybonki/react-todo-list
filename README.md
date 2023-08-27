@@ -29,8 +29,9 @@ Beautifully designed using Chakra UI components.
 
 ## Getting Started
 
-Clone this repository: git clone https://github.com/your-username/todo-list-app.git
-Navigate to the project directory: cd todo-list-app
+Clone this repository: git clone https://github.com/tonybonki/react-todo-list.git
+
+Navigate to the project directory: cd react-todo-list
 Install dependencies: npm install
 Start the app: npm start
 Open your browser and go to http://localhost:3000 to use the app.
