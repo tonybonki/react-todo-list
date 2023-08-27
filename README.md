@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="project-logo.png" alt="Project Logo" width="200">
+  <img src="/react-todo-list/react-todo-list/images/icons/icon.png" alt="Project Logo" width="200">
 </div>
 
 # Project Name
