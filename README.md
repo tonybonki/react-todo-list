@@ -2,7 +2,7 @@
   <img src="project-logo.png" alt="Project Logo" width="100">
 </div>
 
-# Project Name
+# React to-do-list
 
 Short project description goes here.
 
@@ -17,16 +17,32 @@ Short project description goes here.
 
 ## About
 
-Briefly describe what your project does, its purpose, and any other important context. You can also include badges here, such as build status or version.
+This simple yet powerful TodoList application helps you stay organized and manage your tasks effectively. The app is built using React and styled with Chakra UI, providing a clean and intuitive user interface.
+
+## Features
+
+Add, edit, and remove tasks easily.
+Mark tasks as complete or pending with a single click.
+Filter tasks based on their completion status.
+Responsive design ensures seamless usage across devices.
+Beautifully designed using Chakra UI components.
 
 ## Getting Started
 
-Provide instructions on how to set up and run your project locally. Include prerequisites, installation steps, and any configuration needed.
+Clone this repository: git clone https://github.com/your-username/todo-list-app.git
+Navigate to the project directory: cd todo-list-app
+Install dependencies: npm install
+Start the app: npm start
+Open your browser and go to http://localhost:3000 to use the app.
 
 Example:
 
 ```bash
-git clone https://github.com/your-username/your-project.git
+git clone https://github.com/tonybonki/react-todo-list.git
 cd your-project
 npm install
 npm start
+```
+## License
+
+This project is licensed under the MIT License.
