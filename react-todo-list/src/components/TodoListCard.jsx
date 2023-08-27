@@ -51,36 +51,6 @@ export default function ChakraUiForm({ onSubmit }) {
               src="../../images/logos/logo2.png"
             ></Image>
           </Box>
-
-          {/* <HStack
-            as="form"
-            onSubmit={handleSubmit}
-            className="new-item-form"
-            spacing={4}
-          >
-            <Input
-              value={newItem}
-              onChange={(e) => setNewItem(e.target.value)}
-              type="text"
-              id="item"
-              my={3}
-              w={300}
-              size={"sm"}
-            />
-
-            <ButtonGroup size="sm" isAttached variant="outline">
-              <Button type="submit" fontWeight={"light"}>
-                Add
-              </Button>
-              
-              <IconButton
-                type="submit"
-                aria-label="Add to friends"
-                icon={<AddIcon />}
-              />
-            </ButtonGroup>
-            
-          </HStack> */}
           <TodoList />
         </CardHeader>
       </Card>
