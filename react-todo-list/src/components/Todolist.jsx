@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import {
   Input,
   Stack,
@@ -7,23 +7,23 @@ import {
   Button,
   IconButton,
   HStack,
-} from "@chakra-ui/react";
-import { AddIcon } from "@chakra-ui/icons";
-import { useTodoManager } from "./functions/useTodoManager"; // Import the custom hook
-import { TodoItem } from "./TodoItem"; // Import TodoItem component if needed
+} from "@chakra-ui/react"
+import { AddIcon } from "@chakra-ui/icons"
+import { useTodoManager } from "./functions/useTodoManager" // Import the custom hook
+import { TodoItem } from "./TodoItem" // Import TodoItem component if needed
 
-import { useState } from "react";
+import { useState } from "react"
 
 export function TodoList() {
-  const { todos, addTodo, toggleTodo, deleteTodo } = useTodoManager(); // Use the custom hook
-  const [newItem, setNewItem] = useState("");
+  const { todos, addTodo, toggleTodo, deleteTodo } = useTodoManager() // Use the custom hook
+  const [newItem, setNewItem] = useState("")
   function handleSubmit(e) {
-    e.preventDefault();
-    if (newItem === "") return;
+    e.preventDefault()
+    if (newItem === "") return
 
-    onSubmit(newItem);
+    addTodo(newItem)
 
-    setNewItem("");
+    setNewItem("")
   }
   return (
     <>
@@ -43,7 +43,6 @@ export function TodoList() {
           size={"sm"}
         />
         <ButtonGroup
-          onClick={() => addTodo(newItem)}
           size="sm"
           isAttached
           variant="outline"
@@ -60,19 +59,22 @@ export function TodoList() {
         </ButtonGroup>
       </HStack>
 
-     
-        {todos.length === 0 && <p>No Todos</p>}
-        <Stack divider={<StackDivider />} >
-          {todos.map((todo) => (
-            <TodoItem
-              {...todo}
-              key={todo.id}
-              toggleTodo={toggleTodo}
-              deleteTodo={deleteTodo}
-            />
-          ))}
-        </Stack>
-      
+      {todos.length === 0 && (
+        <p>
+          Currently, there are no tasks to display. Your to-do list is clear and
+          up to date. Feel free to add new tasks when needed!
+        </p>
+      )}
+      <Stack divider={<StackDivider />}>
+        {todos.map((todo) => (
+          <TodoItem
+            {...todo}
+            key={todo.id}
+            toggleTodo={toggleTodo}
+            deleteTodo={deleteTodo}
+          />
+        ))}
+      </Stack>
     </>
   );
 }
