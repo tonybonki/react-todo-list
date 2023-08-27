@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="project-logo.png" alt="Project Logo" width="200">
+  <img src="project-logo.png" alt="Project Logo" width="100">
 </div>
 
 # Project Name
