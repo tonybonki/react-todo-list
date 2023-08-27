@@ -7,6 +7,8 @@ import {
   Button,
   IconButton,
   HStack,
+  Card,
+  CardBody,
 } from "@chakra-ui/react"
 import { AddIcon } from "@chakra-ui/icons"
 import { useTodoManager } from "./functions/useTodoManager" // Import the custom hook
@@ -42,11 +44,7 @@ export function TodoList() {
           w={300}
           size={"sm"}
         />
-        <ButtonGroup
-          size="sm"
-          isAttached
-          variant="outline"
-        >
+        <ButtonGroup size="sm" isAttached variant="outline">
           <Button type="submit" fontWeight={"light"}>
             Add
           </Button>
@@ -65,16 +63,20 @@ export function TodoList() {
           up to date. Feel free to add new tasks when needed!
         </p>
       )}
-      <Stack divider={<StackDivider />}>
-        {todos.map((todo) => (
-          <TodoItem
-            {...todo}
-            key={todo.id}
-            toggleTodo={toggleTodo}
-            deleteTodo={deleteTodo}
-          />
-        ))}
-      </Stack>
+    
+        
+          <Stack divider={<StackDivider />}>
+            {todos.map((todo) => (
+              <TodoItem
+                {...todo}
+                key={todo.id}
+                toggleTodo={toggleTodo}
+                deleteTodo={deleteTodo}
+              />
+            ))}
+          </Stack>
+       
+    
     </>
   );
 }
