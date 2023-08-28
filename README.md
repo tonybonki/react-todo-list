@@ -29,7 +29,7 @@ Beautifully designed using Chakra UI components.
 
 ### Technologies Used
 
-- <img src="https://example.com/html-icon.png" alt="HTML Icon" width="20"/> HTML
+- <img src="https://images.vexels.com/media/users/3/166383/isolated/preview/6024bc5746d7436c727825dc4fc23c22-html-programming-language-icon-by-vexels.png" alt="HTML Icon" width="20"/> HTML
 - <img src="https://example.com/chakra-icon.png" alt="Chakra UI Icon" width="20"/> Chakra UI
 - <img src="https://example.com/react-icon.png" alt="React Icon" width="20"/> React
 - <img src="https://example.com/vite-icon.png" alt="Vite Icon" width="20"/> Vite
