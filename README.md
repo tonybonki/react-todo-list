@@ -10,7 +10,6 @@ Short project description goes here.
 
 - [About](#about)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
 - [Features](#features)
 - [Contributing](#contributing)
 - [License](#license)
