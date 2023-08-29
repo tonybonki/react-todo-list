@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 
 function Logo() {
-  return <Image h={5} src="../../images/icons/icon.png"></Image>;
+  return <Image h={5} src="/images/icons/icon.png"></Image>;
 }
 
 export default function Footer() {
@@ -30,7 +30,7 @@ export default function Footer() {
             aria-label="A tooltip"
           >
             <Link href="https://tonybonki.me">
-              <Image h={5} src={"../../images/icons/favicon.ico"}></Image>
+              <Image h={5} src={"/images/icons/favicon.ico"}></Image>
             </Link>
           </Tooltip>
           <Text fontSize={"15px"} pt={1}>

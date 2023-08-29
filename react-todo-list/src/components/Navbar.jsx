@@ -8,7 +8,7 @@ export default function Navbar() {
       <Center boxShadow={"xs"} h="50px">
         <Tooltip hasArrow fontSize={"xs"} label="View Github Repository">
           <Link isExternal href="https://github.com/tonybonki/react-todo-list">
-            <Image h={5} src="../../images/icons/icon.png"></Image>
+            <Image h={5} src="/images/icons/icon.png"></Image>
           </Link>
         </Tooltip>
       </Center>

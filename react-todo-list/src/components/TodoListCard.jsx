@@ -48,7 +48,7 @@ export default function ChakraUiForm({ onSubmit }) {
               mx={"auto"}
               mb={6}
               h="65px"
-              src="../../images/logos/logo2.png"
+              src="/images/logos/logo2.png"
             ></Image>
           </Box>
           <TodoList />
