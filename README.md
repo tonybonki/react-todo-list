@@ -33,7 +33,7 @@ Clone this repository: git clone https://github.com/tonybonki/react-todo-list.gi
 Navigate to the project directory: cd react-todo-list
 Install dependencies: npm install
 Start the app: npm start
-Open your browser and go to http://localhost:3000 to use the app.
+Open your browser and go to http://localhost:{portnumber} to use the app.
 
 Example:
 
