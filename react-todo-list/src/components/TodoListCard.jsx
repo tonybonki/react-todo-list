@@ -40,7 +40,7 @@ export default function ChakraUiForm({ onSubmit }) {
         fontWeight={"light"}
         mx={"auto"}
         my={"100px"}
-        width={{ base: "90%", sm: "40%" }}
+        width={{ base: "90%", sm: "60%", md:'30%' }}
       >
         <CardHeader>
           <Box>
